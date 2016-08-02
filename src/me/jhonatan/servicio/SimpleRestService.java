@@ -1,5 +1,6 @@
 package me.jhonatan.servicio;
 
+
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
@@ -16,7 +17,6 @@ import org.apache.log4j.Logger;
 
 import java.io.IOException;
 import java.util.ArrayList;
-
 
 @Path("/service")
 public class SimpleRestService {
@@ -49,7 +49,7 @@ public class SimpleRestService {
 	
 	@GET
 	   @Path("/userId")
-	   @Produces(MediaType.APPLICATION_XML)
+	   @Produces(MediaType.APPLICATION_JSON)
 	   public User getUser(@QueryParam("userid") int userid){
 		 User user = userDao.getUser(userid);
 	      return user;

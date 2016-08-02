@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="gemStore">
+  <head>
+    <script type="text/javascript" src="angular.js"></script>
+    <script type="text/javascript" src="xml2json.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+   <body ng-controller="StoreController as store">
+    <!--  Store Header  -->
+    <header>
+      <h1 class="text-center">Flatlander Crafted Gems</h1>
+    </header>
+    <!--  Products Container  -->
+    <div class="list-group">
+      <!--  Product Container  -->
+      <div class="list-group-item" ng-repeat="product in store.jsonLocal">
+        <h3>{{product.name}} <em class="pull-right">{{product.price | currency}}</em></h3>
+      </div>
+      --------
+      <div class="list-group-item" ng-repeat="product in store.jsonRemoto.users.user">
+        <h3>{{product.name}} <em class="pull-right">{{product.price | currency}}</em></h3>
+      </div>
+    </div>
+  </body>
+</html>
